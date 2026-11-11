@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beranda Klien — Gawean</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="index.html">Gawean</a>
+<div class="seg" role="group" aria-label="Pilih peran"><a href="home-mitra.html">Mitra</a><a href="home-klien.html" class="on">Klien</a></div>
+<button class="round" id="theme" type="button" aria-label="Ganti tema">🌙</button><span class="round av" id="avatar-initial" aria-hidden="true">S</span></div></header>
+<main>
+<div class="note">Beranda khusus Klien. Di sini kamu bisa memposting kerjaan dan memantau progres.</div>
+
+<section id="v-klien">
+<div class="hi"><h1 id="hi-klien">Halo, Sari 👋</h1><p>Ada 2 hasil kerja yang menunggu dicek.</p></div>
+<div class="grid"><div>
+<div class="stats"><div class="stat"><b id="k-dana">Rp 0</b><span>Dana ditahan</span></div><div class="stat"><b id="k-jalan">0</b><span>Kerjaan berjalan</span></div><div class="stat"><b id="k-cek">0</b><span>Perlu dicek</span></div></div>
+<div class="card"><h2>Perlu dicek <small>Dana cair setelah kamu setuju</small></h2><div id="k-rev"></div></div>
+<div class="card"><h2>Kerjaan saya</h2><div id="k-list"></div></div></div>
+<aside>
+<div class="card hero"><div class="lab">Butuh bantuan?</div><div class="big">Posting kerjaan</div><div class="sub">Tulis kerjaan, tentukan bayaran, lalu pilih Mitra yang cocok.</div><button class="btn sm" type="button" data-toast="Formulir posting kerjaan akan dibuka di sini.">Posting sekarang</button></div>
+<div class="card"><h2>Tips supaya cepat dapat Mitra</h2><ul class="todo"><li>Jelaskan hasil akhir yang kamu mau</li><li>Cantumkan tenggat dan lokasi</li><li>Beri bayaran yang wajar untuk waktunya</li></ul></div>
+</aside></div></section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/klien.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mulai di Gawean</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/onboarding.css">
+</head>
+<body>
+<div class="top"><a class="logo" href="index.html">Gawean</a><button class="theme" id="theme" type="button" aria-label="Ganti tema">🌙</button></div>
+<main>
+<div class="bar" id="bar"><i class="on"></i><i></i><i></i><i></i></div>
+
+<section class="step show" data-s="0">
+<h1>Mau mulai sebagai apa?</h1>
+<p class="sub">Satu akun bisa jadi keduanya. Pilih dulu yang paling kamu butuhkan sekarang.</p>
+<button class="opt" data-role="mitra" aria-pressed="false"><b>Mitra</b><span>Saya mau cari kerjaan sampingan dan dapat penghasilan.</span></button>
+<button class="opt" data-role="klien" aria-pressed="false"><b>Klien</b><span>Saya mau memposting kerjaan dan cari orang yang membantu.</span></button>
+</section>
+
+<section class="step" data-s="1">
+<h1>Kenalan dulu</h1>
+<p class="sub">Data ini hanya dipakai untuk akunmu.</p>
+<label for="nama">Nama lengkap</label><input id="nama" autocomplete="name" placeholder="Contoh: Sari Wulandari">
+<label for="hp">Nomor HP</label><input id="hp" type="tel" inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx">
+<label for="kota">Kota</label>
+<select id="kota"><option value="">Pilih kota</option><option>Jakarta</option><option>Bandung</option><option>Semarang</option><option>Yogyakarta</option><option>Surabaya</option><option>Medan</option><option>Makassar</option><option>Kota lainnya</option></select>
+<p class="err" id="err" role="alert"></p>
+</section>
+
+<section class="step" data-s="2">
+<h1 id="t2">Pilih bidang yang kamu minati</h1>
+<p class="sub" id="s2">Boleh lebih dari satu. Bisa diubah kapan saja.</p>
+<div class="chips" id="chips"></div>
+</section>
+
+<section class="step" data-s="3">
+<div class="done"><div class="ok">✓</div>
+<h1>Akunmu siap, <span id="hi"></span>!</h1>
+<p class="sub" id="s3"></p>
+<div style="margin-top:24px;">
+  <a href="#" class="btn" id="go-dash" style="display:inline-block; width:100%;">Masuk ke Beranda</a>
+</div>
+</div>
+</section>
+
+<div class="nav" id="nav"><button class="btn alt" id="back" type="button" hidden>Kembali</button><button class="btn" id="next" type="button" disabled>Lanjut</button></div>
+</main>
+<script src="assets/js/onboarding.js"></script>
+<script>
+    // Theme toggle for onboarding (since it doesn't use common.js yet or common.js expects different IDs)
+    (function(){
+        var r=document.documentElement,tb=document.getElementById('theme');
+        function sys(){return window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+        var t=null;try{t=localStorage.getItem('theme')}catch(e){}
+        if(t!=='light'&&t!=='dark')t=null;
+        function apply(m){r.setAttribute('data-theme',m);tb.textContent=m==='dark'?'☀️':'🌙';tb.setAttribute('aria-label',m==='dark'?'Ganti ke tema terang':'Ganti ke tema gelap')}
+        apply(t||sys());
+        tb.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';apply(n);try{localStorage.setItem('theme',n)}catch(e){}});
+    })();
+</script>
+</body>
+</html>
