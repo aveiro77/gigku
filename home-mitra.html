@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beranda Mitra — Gawean</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="index.html">Gawean</a>
+<div class="seg" role="group" aria-label="Pilih peran"><a href="home-mitra.html" class="on">Mitra</a><a href="home-klien.html">Klien</a></div>
+<button class="round" id="theme" type="button" aria-label="Ganti tema">🌙</button><span class="round av" id="avatar-initial" aria-hidden="true">S</span></div></header>
+<main>
+<div class="note">Beranda khusus Mitra. Di sini kamu bisa mencari dan mengerjakan gawean.</div>
+
+<section id="v-mitra">
+<div class="hi"><h1 id="hi-mitra">Halo, Sari 👋</h1><p>Ada 5 kerjaan baru yang cocok dengan bidangmu.</p></div>
+<div class="grid"><div>
+<div class="stats"><div class="stat"><b id="m-aktif">3</b><span>Kerjaan aktif</span></div><div class="stat"><b>1</b><span>Menunggu dicek</span></div><div class="stat"><b>12</b><span>Selesai bulan ini</span></div></div>
+<div class="card"><h2>Kerjaan aktif <small>Segera selesaikan sebelum tenggat</small></h2><div id="m-list"></div></div>
+<div class="card"><h2>Kerjaan untukmu <small>Sesuai bidang pilihanmu</small></h2>
+<div class="filters" id="filters"><button type="button" data-f="all" aria-pressed="true">Semua</button><button type="button" data-f="Online" aria-pressed="false">Online</button><button type="button" data-f="Di lokasi" aria-pressed="false">Di lokasi</button></div>
+<div id="m-rek"></div></div></div>
+<aside>
+<div class="card hero"><div class="lab">Saldo Mitra</div><div class="big">Rp 185.000</div><div class="sub">+ Rp 42.500 menunggu dicek Klien (sudah dipotong komisi 15%)</div><button class="btn sm" type="button" data-toast="Penarikan ke rekening bisa dimulai setelah rekening ditambahkan.">Tarik saldo</button></div>
+<div class="card"><h2>Profil 70% lengkap</h2><div class="prog"><i style="width:70%"></i></div><ul class="todo"><li>Tambah foto profil</li><li>Isi satu kalimat tentang dirimu</li><li>Tambahkan rekening untuk tarik saldo</li></ul></div>
+</aside></div></section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/mitra.js"></script>
+</body>
+</html>
